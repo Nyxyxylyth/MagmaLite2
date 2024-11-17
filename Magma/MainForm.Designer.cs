@@ -1874,8 +1874,7 @@ namespace MagmaC3
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(247, 54);
             this.txtDescription.TabIndex = 130;
-            this.txtDescription.Text = "Created with Magma: C3 Roks Edition. For more great customs authoring tools, visi" +
-    "t forums.customscreators.com";
+            this.txtDescription.Text = "Created with Magma: C3 Roks Edition";
             this.txtDescription.TextChanged += new System.EventHandler(this.txtDescription_TextChanged);
             // 
             // txtTitleDisplay

@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Magma/.vs
+/Magma/publish
+/Magma/obj/x86/Debug
+/Magma/bin/Debug/app.publish
+/Magma/bin/Debug/bin
+/Magma/bin/Debug/MagmaC3.application
+/Magma/bin/Debug/MagmaC3.exe
+/Magma/bin/Debug/MagmaC3.exe.config
+/Magma/bin/Debug/MagmaC3.exe.manifest
+/Magma/bin/Debug/MagmaC3.pdb

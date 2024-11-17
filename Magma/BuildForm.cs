@@ -622,6 +622,7 @@ namespace MagmaC3
             bool rc;
             var fsongsraw = extract_folder + "songs.dta.raw";
             var fsongsdta = extract_folder + "songs.dta";
+            bool bAuthorFound = false;
 
             try
             {
@@ -886,6 +887,18 @@ namespace MagmaC3
                                 swSongsDta.WriteLine("      (hopo_threshold " + hopovalue + ")");
                                 line = "";
                             }
+                            else if (line.Contains("'author'"))
+                            {
+                                swSongsDta.WriteLine(line);
+                                if (mMainForm.SongAuthor != "")
+                                {
+                                    // Swallow the next line and replace it with the Magma author
+                                    line = srSongsRaw.ReadLine();
+                                    swSongsDta.WriteLine("      '" + mMainForm.SongAuthor + "'");
+                                    line = "";
+                                }
+                                bAuthorFound = true;
+                            }
                             else if (line == ")")
                             {
                                 if (mMainForm.EnableTonic && mMainForm.TonicNote != -1)
@@ -900,6 +913,14 @@ namespace MagmaC3
                                 if (mMainForm.HasProBass && mMainForm.ProBassDiff != 0)
                                 {
                                     swSongsDta.WriteLine("   " + mMainForm.BassTuning);
+                                }
+                                if ( (bAuthorFound == false) && (mMainForm.SongAuthor != "") )
+                                {
+                                    // If author wasn't already present and is not blank, add it now
+                                    swSongsDta.WriteLine("   (");
+                                    swSongsDta.WriteLine("      'author'");
+                                    swSongsDta.WriteLine("      '" + mMainForm.SongAuthor + "'");
+                                    swSongsDta.WriteLine("   )");
                                 }
                                 swSongsDta.WriteLine("");
                                 swSongsDta.WriteLine(";DO NOT EDIT THE FOLLOWING LINES MANUALLY");

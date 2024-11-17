@@ -41,7 +41,7 @@ namespace MagmaC3
         public string CrowdAudio;
         public string ProjectCompiler = "MagmaCompilerC3.exe";
         public string PackageDisplay = "";
-        public string PackageDescription = "Created with Magma: C3 Roks Edition. For more great customs authoring tools, visit forums.customscreators.com";
+        public string PackageDescription = "Created with Magma: C3 Roks Edition";
         public string PackageThumb = "";
         public string AudacityPath = "";
         public string C3CONToolsPath = "";
@@ -1248,7 +1248,7 @@ namespace MagmaC3
 
             PackageDisplay = "";
             txtTitleDisplay.Text = PackageDisplay;
-            PackageDescription = "Created with Magma: C3 Roks Edition. For more great customs authoring tools, visit forums.customscreators.com";
+            PackageDescription = "Created with Magma: C3 Roks Edition";
             txtDescription.Text = PackageDescription;
             dispDefault = true;
             dispDLC = false;
@@ -5615,12 +5615,12 @@ namespace MagmaC3
 
         private void btnDescDefault_Click(object sender, EventArgs e)
         {
-            txtDescription.Text = "Created with Magma: C3 Roks Edition. For more great customs authoring tools, visit forums.customscreators.com";
+            txtDescription.Text = "Created with Magma: C3 Roks Edition";
         }
 
         private void btnDescC3_Click(object sender, EventArgs e)
         {
-            txtDescription.Text = "Brought to you by C3. For more great customs like this one, visit www.customscreators.com";
+            txtDescription.Text = "For more great customs like this one, visit www.rhythmverse.co";
         }
 
         private void updateTitleDisplay()
